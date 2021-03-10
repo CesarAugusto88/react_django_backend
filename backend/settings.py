@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'Hggatrsghutran&76%4P[.kLJuGxZZASQP8*7uJ$321L'
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000', '13.68.187.199', 'www.meusite.com.br']
+ALLOWED_HOSTS = ['13.68.187.199', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -116,7 +116,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CORS_ALLOWED_ORIGINS = [
+        "http://13.68.187.199",
         "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "13.68.187.199"
+        "http://127.0.0.1:3000"
  ]
