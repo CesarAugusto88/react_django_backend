@@ -118,5 +118,5 @@ STATIC_URL = '/static/'
 CORS_ALLOWED_ORIGINS = [
         "http://127.0.0.1:3000",
         "http://localhost:3000",
-        "13.90.229.205"
+        "http://13.90.229.205"
  ]
