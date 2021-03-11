@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'Hggatrsghutran&76%4P[.kLJuGxZZASQP8*7uJ$321L'
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '52.234.131.95'] 
+ALLOWED_HOSTS = ['localhost', '13.90.229.205'] 
 
 
 # Application definition
@@ -119,7 +119,7 @@ STATIC_URL = '/static/'
 CORS_ALLOWED_ORIGINS = [
         "http://127.0.0.1:3000",
         "http://localhost:3000",
-        "http://52.234.131.95/"
+        "http://13.90.229.205"
  ]
 
 STATIC_URL = '/static/'
