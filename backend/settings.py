@@ -1,26 +1,12 @@
-from pathlib import Path
 import os
 
-# from decouple import config
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+SECRET_KEY = 'z8*^HytbbBgvRE3#4wj4oowbPoUi0(&*8r$_uw6+f7qeh=t9##'
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-
-# SECURITY WARNING: don't run with debug turned on in production!
-
-SECRET_KEY = 'Hggatrsghutran&76%4P[.kLJuGxZZASQP8*7uJ$321L'
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '13.90.229.205'] 
-
-
-# Application definition
+ALLOWED_HOSTS = ['localhost', '13.90.229.205', 'www.meudominio.com.br']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -66,20 +52,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
 DATABASES = {
-    'default': {
+    'local': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djangoreact',
+        'USER': 'djangoreact',
+        'PASSWORD': 'khjgvhkjlGKJFJHGK(*&^%$$%^',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
-
-
-# Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -96,10 +82,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/3.1/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -110,17 +92,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
 STATIC_URL = '/static/'
 
-CORS_ALLOWED_ORIGINS = [
-        "http://127.0.0.1:3000",
-        "http://localhost:3000",
-        "13.90.229.205"
- ]
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3001",
+    "http://127.0.0.1:3001",
+    "http://13.90.229.205"
+]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")

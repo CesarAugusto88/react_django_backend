@@ -1,11 +1,7 @@
 .venv
-
 venv
-
-*.pyc
-
-configurando_nginx_uwsgi
-
-.env
-
 db.sqlite3
+*.pyc
+__pycache__/
+configurando_nginx_uwsgi
+.env
