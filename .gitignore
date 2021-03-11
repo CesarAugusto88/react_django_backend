@@ -1,5 +1,11 @@
 .venv
+
+venv
+
 *.pyc
+
 configurando_nginx_uwsgi
+
 .env
-*.sqlite3
+
+db.sqlite3
