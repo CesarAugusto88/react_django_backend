@@ -2,4 +2,4 @@
 *.pyc
 configurando_nginx_uwsgi
 .env
-db.sqlite3
+*.sqlite3

@@ -18,4 +18,3 @@ class ItemViewSet(viewsets.ModelViewSet):
     serializer_class = ItemSerializer
     permission_classes = [permissions.IsAuthenticated]    
     authentication_classes = [authentication.TokenAuthentication, authentication.SessionAuthentication]
- 
