@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 
-# from decouple import config
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -14,8 +14,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-SECRET_KEY = 'Hggatrsghutran&76%4P[.kLJuGxZZASQP8*7uJ$321L'
-DEBUG = True
+SECRET_KEY = config("SECRET_KEY")
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = ['localhost', '13.90.229.205'] 
 
